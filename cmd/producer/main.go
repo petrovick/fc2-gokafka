@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"log"
+
+	"github.com/confluentinc/confluent-kafka-go/kafka"
 )
 
 func main() {
@@ -11,8 +12,6 @@ func main() {
 	producer := NewKafkaProducer()
 	Publish("transferiu", "teste", producer, []byte("transferecia2"), deliveryChan)
 	DeliveryReport(deliveryChan) // async
-
-
 
 	//e := <-deliveryChan
 	//msg := e.(*kafka.Message)
@@ -27,7 +26,7 @@ func main() {
 
 func NewKafkaProducer() *kafka.Producer {
 	configMap := &kafka.ConfigMap{
-		"bootstrap.servers":   "gokafka_kafka_1:9092",
+		"bootstrap.servers":   "3consumerproducer-kafka-1:9092",
 		"delivery.timeout.ms": "0",
 		"acks":                "all",
 		"enable.idempotence":  "true",

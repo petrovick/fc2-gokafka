@@ -1,4 +1,4 @@
-module github.com/codeedu/fc2-gokafka
+module github.com/petrovick/fc2-gokafka
 
 go 1.16
 

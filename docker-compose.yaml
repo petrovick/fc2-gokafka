@@ -6,7 +6,7 @@ services:
     container_name: gokafka
     volumes:
       - .:/go/src/
-    extra_hosts:
+    extra_hosts: # É um forma de não usar network
       - "host.docker.internal:172.17.0.1"
 
   zookeeper:
